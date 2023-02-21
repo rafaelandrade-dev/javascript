@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country</title>
+</head>
+<body>
+    <h1>Checking Nationality</h1>
+    Qual o seu país de origem? <input type="text" id="check">
+    <input type="button" value=Verify id="verify" onclick="checar()">
+    <div id="res">
+        <p>Digite sua Nacionalidade Acima!</p>
+    </div>
+    
+    <script>
+        function checar() {
+            var verify = document.querySelector('#verify')
+            var check = document.querySelector('#check')
+            var res = document.querySelector('#res')
+            var nacionality = check.value
+
+            res.innerHTML += `Sua nacionalidade é ${nacionality}!`
+
+            if (nacionality != "brasil") {
+                res.innerHTML = 'Você é Estrangeiro!'
+            }
+            else {
+                res.innerHTML = 'Você é brasileiro'
+         }
+    }
+
+    </script>
+
+
+</body>
+</html>
+
+
+
+
+<!-- var nac = 'EUA'
+
+if (nac != 'BR') {
+    console.log(`Você é estrangeiro`)
+}
+else {
+    console.log(`Você é Brasileiro`)
+} -->
